@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Universe Facts</title>
+    <style>
+        body {
+            font-family: jokerman ,Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: jokerman;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Universe Fact</h1>
+        <p id="fact" style="font-family: Georgia, serif;"></p>
+        <button id="newFactButton">Get a New Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Vastness",
+                "description": "The universe is so vast that it is estimated to be about 93 billion light-years in diameter."
+            },
+            {
+                "fact": "Age",
+                "description": "The universe is approximately 13.8 billion years old, based on measurements of the cosmic microwave background radiation."
+            },
+            {
+                "fact": "Galaxies",
+                "description": "There are estimated to be over 2 trillion galaxies in the observable universe."
+            },
+            {
+                "fact": "Dark Matter",
+                "description": "About 27% of the universe is made up of dark matter, which does not emit light or energy, making it invisible and detectable only through its gravitational effects."
+            },
+            {
+                "fact": "Dark Energy",
+                "description": "Roughly 68% of the universe is composed of dark energy, a mysterious force that is driving the accelerated expansion of the universe."
+            },
+            {
+                "fact": "Black Holes",
+                "description": "Supermassive black holes are found at the centers of most galaxies, including our Milky Way, which has a black hole named Sagittarius A*."
+            },
+            {
+                "fact": "Neutron Stars",
+                "description": "A neutron star is so dense that a sugar-cube-sized amount of its material would weigh about as much as all of humanity combined."
+            },
+            {
+                "fact": "Expanding Universe",
+                "description": "The universe has been expanding since the Big Bang, and galaxies are moving away from each other as space itself expands."
+            },
+            {
+                "fact": "Cosmic Microwave Background",
+                "description": "The afterglow of the Big Bang, known as the cosmic microwave background radiation, fills the universe and can be detected in all directions."
+            },
+            {
+                "fact": "Light Speed",
+                "description": "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth, traveling at a speed of approximately 299,792 kilometers per second (186,282 miles per second)."
+            },
+            {
+                "fact": "Exoplanets",
+                "description": "Thousands of exoplanets (planets outside our solar system) have been discovered, with some located in the habitable zone of their stars, where conditions may be right for life."
+            },
+            {
+                "fact": "Time Dilation",
+                "description": "According to Einstein's theory of relativity, time moves slower in stronger gravitational fields, meaning time passes differently for astronauts in space compared to people on Earth."
+            },
+            {
+                "fact": "The Observable Universe",
+                "description": "We can only see a portion of the universe, known as the observable universe, which is limited by the distance light has traveled since the Big Bang."
+            },
+            {
+                "fact": "Galactic Cannibalism",
+                "description": "Larger galaxies can 'consume' smaller ones through gravitational attraction, a process known as galactic cannibalism."
+            },
+            {
+                "fact": "The Milky Way",
+                "description": "Our galaxy, the Milky Way, is a barred spiral galaxy and is estimated to contain 100 to 400 billion stars."
+            },
+            {
+                "fact": "Solar System",
+                "description": "Our solar system is located in one of the spiral arms of the Milky Way, called the Orion Arm."
+            },
+            {
+                "fact": "Cosmic Scale",
+                "description": "The largest known structure in the universe is the Hercules-Corona Borealis Great Wall, a massive galaxy filament that spans over 10 billion light-years."
+            },
+            {
+                "fact": "Asteroids and Comets",
+                "description": "There are millions of asteroids and comets in our solar system, with the asteroid belt located between Mars and Jupiter."
+            },
+            {
+                "fact": "Life Ingredients",
+                "description": "The building blocks of life, such as amino acids, have been found in space, suggesting that the ingredients for life may be widespread in the universe."
+            },
+            {
+                "fact": "Future of the Universe",
+                "description": "The ultimate fate of the universe is still a topic of research, with theories ranging from continued expansion to a potential 'Big Crunch' where the universe collapses back in on itself."
+            }
+        ];
+
+        document.getElementById('newFactButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const fact = facts[randomIndex];
+            document.getElementById('fact').innerText = `${fact.fact}: ${fact.description}`;
+        });
+    </script>
+</body>
+</html>
